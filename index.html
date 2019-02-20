@@ -12,6 +12,7 @@ Website: <input type="text" id="website" value="Type website here">
 
 <button onclick="myFunction()">Go to Site</button><br><br>
 <h1 id="demo"></h1>
+<h2 id="subdemo"></h2>
 <button onclick="goYouTube()">YouTube Search</button><button onclick="Fireworks()">bruh</button>
 
 <script>
@@ -59,7 +60,8 @@ function myFunction() {
   }
   else 
   {
-    document.getElementById("demo").innerHTML = "Invalid syntax!";
+    document.getElementById("demo").innerHTML = "Loading " + x;
+    document.getElementById("subdemo").innerHTML = "Invalid syntax, attempting anyway..."
   }
 }
 
