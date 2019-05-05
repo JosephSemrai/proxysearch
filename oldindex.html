@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+</head>
+<body>
+
+  <h1><b>New -</b> Drag this to your bookmarks bar and click it on the website that you want to run.</h1>
+
+  <button><a href="javascript:(function()%7Bvar%20x%20%3D%20window.location.href%3Bwindow.location.href%20%3D%20%22https%3A%2F%2Fstream.myedapp.com%2F%3Ffwd%3D%22%20%2B%20x%7D)()">Drag me to the bookmarks bar (MCHS Proxy)</a></button>
+
+<br>
+  <h1>Old stuff</h1>
+    <h1>Internet Freedom Machine for Tigers</h1>
+    <h2>Website is a test, not meant to be used as a proxy. I am not responsible for what you utilize this website for. Be sure that you have adequate permission to use this on the network that you are on.</h2>
+    <h2><b><font color ="red">DO NOT REDISTRIBUTE!</font></b></h2>
+Website: <input type="text" id="website" value="Type website here">
+<p>Supported protocols: http, https | Substrings: "https://" "http://" and "", for example: youtube.com, https://youtube.com, http://youtube.com</p>
+
+<p>If there's a bug, you know who to ask.</p>
+
+<button onclick="myFunction()">Go to Site</button><br><br>
+<h1 id="demo"></h1>
+<h2 id="subdemo"></h2>
+<button onclick="goYouTube()">YouTube Search</button><button onclick="Fireworks()">bruh</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("website").value;
+
+  
+  
+  if (0 == x.substring(0,11).localeCompare("http://www."))
+  {
+    y = x.substring(0,11)
+    x = x.substring(11)
+    document.getElementById("demo").innerHTML = "Loading " + x + " | Substring: " + y;
+    window.location.href = "https://stream.myedapp.com/?fwd=https://" + x
+  }
+  else if (0 == x.substring(0,12).localeCompare("https://www."))
+  {
+    y = x.substring(0,12)
+    x = x.substring(12)
+    document.getElementById("demo").innerHTML = "Loading " + x + " | Substring: " + y;
+    window.location.href = "https://stream.myedapp.com/?fwd=https://" + x
+  }
+  else if (0 == x.substring(0,8).localeCompare("https://"))
+  {
+      y = x.substring(0,8)
+      x = x.substring(8)
+      document.getElementById("demo").innerHTML = "Loading " + x + " | Substring: " + y;
+      window.location.href = "https://stream.myedapp.com/?fwd=https://" + x
+  }
+  else if (0 == x.substring(0,7).localeCompare("http://"))
+  {
+    y = x.substring(0,7)
+    x = x.substring(7)
+    document.getElementById("demo").innerHTML = "Loading " + x + " | Substring: " + y;
+    window.location.href = "https://stream.myedapp.com/?fwd=https://" + x
+  }
+  else if (0 == x.localeCompare("Type website here"))
+  {
+    document.getElementById("demo").innerHTML = "You must enter a website!";
+  }
+  else if (0 == x.localeCompare(""))
+  {
+    document.getElementById("demo").innerHTML = "You can't just leave it blank!";
+  }
+  else 
+  {
+    document.getElementById("demo").innerHTML = "Loading " + x;
+    document.getElementById("subdemo").innerHTML = "Invalid syntax, attempting anyway...";
+    window.location.href = "https://stream.myedapp.com/?fwd=https://" + x
+  }
+}
+
+
+function goYouTube()
+{
+  window.location.href = "https://websiteacademics.herokuapp.com/index.html"
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+<p>You must use the YouTube Search tool to navigate YouTube due to the nature of how YouTube appends videos to the URL.</p>
+
+</body>
+</html>
